@@ -21,13 +21,14 @@ const family = {
 
 // }
 
+let familytag = '';
+
+for( x of family.familysite ){
+      familytag += `<li>${x.atext}</li>`
+}
+
 window.addEventListener('load',function(){
-      document.querySelector("#family h2").innerHTML +=family.d1text;
-      // 특정 태그 안에 태그를 삽입하기
-      document.querySelector("#family ul").innerHTML =`<li>${family.familysite[0].atext}</li>`;
-      // 추가 대입식 +=
-      document.querySelector("#family ul").innerHTML +=`<li>${family.familysite[1].atext}</li>`;
-      document.querySelector("#family ul").innerHTML +=`<li>${family.familysite[2].atext}</li>`;
+      document.querySelector("#family ul").innerHTML = familytag;
 
 });
 
