@@ -16,25 +16,14 @@ const family = {
         ]
 }
 
-// 터미널에 node object/letconst  파일 안 object안 letconst의 콘솔 명령어 실행
+// window.onload = function(){
+//   // 화면이 로딩이 끝나면 처리(밑이랑 같은거여서 주석처리 됨.)
 
-// console.log(family.familysite[0].atext, family.familysite[0].href);
-// const mytag =`<a href="${family.familysite[2].href}"> ${family.familysite[2].atext}</a>`;
+// }
 
-// console.log(mytag);
+window.addEventListener('load',function(){
+      document.querySelector("#family h2").innerHTML +=family.d1text;
+      // 특정 태그 안에 태그를 삽입하기
 
+});
 
-
-
-// 모든 항목 출력 (for...of)
-for (const site of family.familysite) {
-  console.log(site.atext, site.href);
-}
-
-// HTML 태그 생성
-let mytags = '';
-for (const site of family.familysite) {
-  mytags += `<a href="${site.href}">${site.atext}</a> `;
-}
-
-console.log(mytags);
