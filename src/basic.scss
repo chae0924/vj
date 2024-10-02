@@ -1,0 +1,120 @@
+//  팀작업_브런치_상단스타일
+#hd {
+  .inner {
+    h1 {
+      padding: 0 1.5rem;
+      .logo {
+        // svg 로고 배경으로 처리
+        // background-image: url('모바일 로고 svg');
+        // width: 30vw;
+        // max-width: 150px;
+        
+        // @media (min-width:991px) {
+        //   background-image: url('데스크탑 로고 svg');
+        //   width: 150px;
+        //   height: 60px;        
+        // }
+        &:before{
+          content: "svg로고";
+        }
+        .visually-hidden {}
+    }
+  }
+
+    #hd_allmenu_bby {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lightsteelblue" class="bi bi-list" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/> </svg>');
+      width: 2rem; height: 2rem;
+      background-size: cover;
+    }
+
+    nav {
+      a{
+        color: cornflowerblue;
+        white-space: nowrap; // 옆으로 길어짐 글씨 길이만큼(자동떨굼 안함)
+      }
+      > ul {
+        margin-bottom: 0;
+        > li { //대메뉴 li
+          &:nth-child(2){
+            > a{
+              display: inline-block; // d-inline-block
+            }
+            .position-absolute{
+              right:unset;
+              ul{
+                display: inline-block;
+              }
+            }
+          }
+          
+          > a { font-size: 1.5em; padding: 0 1.5rem; } //px-4
+          // 소메뉴
+          .position-absolute {
+            left: 0; // start-0
+            right:0; // end-0
+            top: 100%;
+            // 부모 왼쪽위에 딱붙이므로 부모 높이만큼 내려왔다
+            min-width: 100px;
+            max-height: 0;
+            overflow: hidden; // oberflow-hidden
+            ul {
+              background-color: white; // bg-white
+              border: 1px solid #ccc; // border
+              padding: 1rem; //p-3
+              li {
+                a {}
+              }
+            }
+          }
+
+          // hover
+          &:hover{
+            >a{
+              color: orange; //대메뉴 활성화
+            }
+            .position-absolute{
+              transition: 0.5s; //위치에 따라 호버됨이 다름 지금은 hover할때만 애니메이션 처리
+              max-height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#navi{
+  @media (max-width:991px) {
+    position:absolute; //전체메뉴
+    .position-absolute{ //소메뉴
+      position: unset !important;
+
+    }
+  }
+}
+
+
+
+body.menuOpen{
+  &:after{
+    content:"";
+    display: block;
+    position: fixed;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background-color: rgba(0,0,0,.8);
+  }
+  #hd{
+
+    #hd_allmenu_bby {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="lightsteelblue" class="bi bi-x" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1.293 1.293a1 1 0 0 1 1.414 0L8 7.586l5.293-6.293a1 1 0 0 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/> </svg>');
+      width: 2rem; height: 2rem;
+    }
+
+    nav{
+      display: block !important;
+      background-color: #131313;
+    }
+  }
+}
