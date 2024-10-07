@@ -1,0 +1,10 @@
+/* 커스터마이징 공통클래스 */
+.itemcenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zup{
+  z-index: 100;
+}

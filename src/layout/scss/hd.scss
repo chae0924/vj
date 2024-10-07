@@ -1,4 +1,3 @@
-//  팀작업_브런치_상단스타일
 #hd {
   .inner {
     h1 {
@@ -20,7 +19,7 @@
         // }
         width: 150px;
         height: 60px;
-        
+
         .visually-hidden {}
       }
     }
@@ -34,7 +33,6 @@
 
     nav {
       a {
-        color: cornflowerblue;
         white-space: nowrap; // 옆으로 길어짐 글씨 길이만큼(자동떨굼 안함)
       }
 
@@ -47,7 +45,7 @@
           right: 0;
           top: 100%;
           height: 0;
-          border-top: 1px solid #ddd;
+          // border-top: 1px solid #ddd;
 
         }
 
@@ -61,7 +59,7 @@
           height: 0;
           // background: #131313;
           background: white;
-          border-bottom: 1px solid #ddd;
+          // border-bottom: 1px solid #ddd;
           transition: height 0.5s; //위치에 따라 호버됨이 다름 지금은 hover할때만 애니메이션 처리
 
 
@@ -181,4 +179,23 @@ body.menuOpen {
       background-color: #131313;
     }
   }
+}
+
+body.slide-2,
+body.slide-4{
+  #hd{
+    a{
+      color: white !important;
+    }
+  }
+  #mainBanner{
+    .swiper-slide{
+      color: white !important;
+    }
+    .indicate{
+      color: white !important;
+    }
+  }
+
+
 }

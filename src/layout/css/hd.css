@@ -15,7 +15,6 @@
   background-size: cover;
 }
 #hd .inner nav a {
-  color: cornflowerblue;
   white-space: nowrap;
 }
 #hd .inner nav > ul::after {
@@ -26,7 +25,6 @@
   right: 0;
   top: 100%;
   height: 0;
-  border-top: 1px solid #ddd;
 }
 #hd .inner nav > ul:before {
   content: "";
@@ -37,7 +35,6 @@
   top: 100%;
   height: 0;
   background: white;
-  border-bottom: 1px solid #ddd;
   transition: height 0.5s;
 }
 #hd .inner nav > ul:hover::before {
@@ -106,4 +103,17 @@ body.menuOpen #hd #hd_allmenu_bby {
 body.menuOpen #hd nav {
   display: block !important;
   background-color: #131313;
+}
+
+body.slide-2 #hd a,
+body.slide-4 #hd a {
+  color: white !important;
+}
+body.slide-2 #mainBanner .swiper-slide,
+body.slide-4 #mainBanner .swiper-slide {
+  color: white !important;
+}
+body.slide-2 #mainBanner .indicate,
+body.slide-4 #mainBanner .indicate {
+  color: white !important;
 }

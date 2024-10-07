@@ -28,24 +28,6 @@ const family = {
         ]
 }
 
-// window.onload = function(){
-//   // 화면이 로딩이 끝나면 처리(밑이랑 같은거여서 주석처리 됨.)
-
-// }
-
-let familytag = '';
-familytag += `<h2>${family.d1text}</h2> <ul>`
-
-for( x of family.familysite ){
-      familytag += `<li>${x.atext}</li>`
-}
-familytag +=`</ul>`
-// 패밀리노출
-window.addEventListener('load',function(){
-      // document.querySelector("#family ul").innerHTML = familytag;
-
-});
-
 const mynavi = [
   {
       title: "대박적",
@@ -103,8 +85,3 @@ const mynavi = [
       ]
   }
 ];
-
-for(z in mynavi.submenu){
-  // this.document.querySelectorAll("#navi>ul>li>a")[z].innerHTML = z.text;
-}
-

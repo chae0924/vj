@@ -1,0 +1,15 @@
+//  팀작업_브런치_상단스타일
+
+
+
+#mainBanner{
+  .swiper-slide{
+    background: #000;
+    font-size: 100px !important;
+    opacity: 1;
+    transition: 0.5s;
+    &.swiper-slide-active{
+      opacity: 0.5;
+    }
+  }
+}
