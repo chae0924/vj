@@ -106,14 +106,22 @@ body.menuOpen #hd nav {
 }
 
 body.slide-2 #hd a,
+body.slide-3 #hd a,
 body.slide-4 #hd a {
   color: white !important;
 }
 body.slide-2 #mainBanner .swiper-slide,
+body.slide-3 #mainBanner .swiper-slide,
 body.slide-4 #mainBanner .swiper-slide {
   color: white !important;
 }
 body.slide-2 #mainBanner .indicate,
+body.slide-3 #mainBanner .indicate,
 body.slide-4 #mainBanner .indicate {
   color: white !important;
+}
+body.slide-2 #Layer_2,
+body.slide-3 #Layer_2,
+body.slide-4 #Layer_2 {
+  fill: aliceblue;
 }
