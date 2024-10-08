@@ -1,16 +1,3 @@
-// window.onload = function(){
-//   // 화면이 로딩이 끝나면 처리(밑이랑 같은거여서 주석처리 됨.)
-
-// }
-
-let familytag = '';
-familytag += `<h2>${family.d1text}</h2> <ul>`
-
-for( x of family.familysite ){
-      familytag += `<li>${x.atext}</li>`
-}
-familytag +=`</ul>`
-// 패밀리노출
 
 
 window.addEventListener('load',function(){
@@ -34,5 +21,26 @@ window.addEventListener('load',function(){
           </li>`
   }
   navitarget.innerHTML = navitag;
+
+
+  //호출영역
+  this.document.querySelector("#family h2").innerHTML = family.d1text;
+
+  let familylist  = '';
+
+  // for(x in family.faimilysite ){
+  //     familylist += `<li>${family.faimilysite[x].atext}</li>`;
+  // }
+
+  for(x of family.faimilysite ){
+    familylist += `<li>${x.atext}</li>`;
+  }
+  this.document.querySelector("#family ul").innerHTML = familylist;
+
+
+  //패밀리노출
+  this.document.querySelector("#family h2").addEventListener('click', function(){
+    this.classList.toggle('open');
+  })
 
 })

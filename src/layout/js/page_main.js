@@ -1,22 +1,23 @@
-window.addEventListener('load', function() {
-  const mainBanner = new Swiper('.swiper-container', {
-    slidesPerView: 1, // 한 번에 보여줄 슬라이드 수
-    spaceBetween: 0, // 슬라이드 사이의 간격
-    effect: "fade", // 페이드 효과
-    loop: true, // 슬라이드 반복
+window.addEventListener('load', function(){
+  const mainBanner = new Swiper('#mainBanner .swiper-container', {
+    effect :"fade",
+    slidesPerView: 1,          // 한 번에 보여줄 슬라이드 개수
+    spaceBetween:0,          // 슬라이드 간의 간격
+   // centeredSlides: true,      // 가운데 정렬 모드
+    loop: true,                // 반복 처리
     autoplay: {
-      delay: 6000, // 6초마다 슬라이드 변경
-      disableOnInteraction: false, // 사용자 인터랙션 후에도 autoplay 유지
+      delay: 6000,             // 자동 롤링 딜레이 (3초)
+      disableOnInteraction: false,  // 사용자 상호작용 후에도 자동 롤링 유지
     },
     pagination: {
       el: ".indicate",
       clickable: true,
       renderBullet: function (index, className) {
-
-        var swiperSlide = this.slides[index];
         
+        var swiperSlide = this.slides[index];
+      
         var btnMsg = swiperSlide.dataset.btnmsg;
-
+        
         return '<span class="' + className + ' w-auto h-auto p-2 mx-3 bg-transparent border border-white ">' + btnMsg + '</span>';
       },
     },

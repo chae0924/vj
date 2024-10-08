@@ -5,11 +5,12 @@
 #mainBanner{
   .swiper-slide{
     background: #000;
-    font-size: 100px !important;
+    font-size: 100px;
     opacity: 1;
     transition: 0.5s;
     &.swiper-slide-active{
       opacity: 0.5;
+      font-size: 200px !important;
     }
   }
 }

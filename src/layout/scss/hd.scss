@@ -45,12 +45,12 @@
           right: 0;
           top: 100%;
           height: 0;
-          // border-top: 1px solid #ddd;
+          // border-top: 1px solid #222;
 
         }
 
         &:before {
-          content: "";
+          // content: "";
           display: block;
           position: absolute;
           left: 0;
@@ -59,7 +59,7 @@
           height: 0;
           // background: #131313;
           background: white;
-          // border-bottom: 1px solid #ddd;
+          // border-bottom: 1px solid #222;
           transition: height 0.5s; //위치에 따라 호버됨이 다름 지금은 hover할때만 애니메이션 처리
 
 
@@ -74,7 +74,7 @@
 
           //대메뉴 li
           &:nth-child(2) {
-            padding: 0 2rem 0 0;
+            padding: 0 2rem;
 
             >a {}
 
@@ -102,7 +102,7 @@
             min-width: 100px;
             height: 0;
             padding: 0 1rem;
-            overflow: hidden; // oberflow-hidden
+            overflow: hidden; // overflow-hidden
             transition: 0.5s; //위치에 따라 호버됨이 다름 지금은 hover할때만 애니메이션 처리
 
 
@@ -121,7 +121,7 @@
           // hover
           &:hover {
             >a {
-              color: orange; //대메뉴 활성화
+              color: cornflowerblue; //대메뉴 활성화
             }
 
           }
@@ -130,7 +130,7 @@
 
         &:hover {
           .position-absolute {
-            height: 15rem;
+            // height: 15rem;
           }
         }
       }
@@ -202,4 +202,27 @@ body.slide-4{
   }
 
 
+}
+
+body{
+  #family{
+    transform: translateX(150%);
+    transition:0.1s;
+  }
+  &.scrolldown{
+    #hd{
+      background-color: lightgoldenrodyellow !important;
+      border-bottom: 1px solid #222;
+      transition:0.4s;
+      a:not(.logo){
+        color: #222 !important;
+        padding: 18px 1rem !important;
+        transition:0.4s;
+      }
+    }
+    #family{
+    transform: translateX(0);
+
+    }
+  }
 }
