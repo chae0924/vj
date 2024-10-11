@@ -39,9 +39,6 @@
 #hd .inner nav > ul:hover::before {
   height: 15rem;
 }
-#hd .inner nav > ul > li:nth-child(2) {
-  padding: 0 2rem;
-}
 #hd .inner nav > ul > li:nth-child(2) .position-absolute {
   right: unset;
 }
@@ -50,7 +47,7 @@
 }
 #hd .inner nav > ul > li > a {
   font-size: 1em;
-  padding: 20px 1.5rem;
+  padding: 20px 2rem;
 }
 #hd .inner nav > ul > li .position-absolute {
   left: 0;
@@ -105,6 +102,11 @@ body.slide-3 #hd a,
 body.slide-4 #hd a {
   color: white !important;
 }
+body.slide-2 #hd a:hover,
+body.slide-3 #hd a:hover,
+body.slide-4 #hd a:hover {
+  color: cornflowerblue !important;
+}
 body.slide-2 #mainBanner .swiper-slide,
 body.slide-3 #mainBanner .swiper-slide,
 body.slide-4 #mainBanner .swiper-slide {
@@ -130,10 +132,17 @@ body.scrolldown #hd {
   border-bottom: 1px solid #222;
   transition: 0.4s;
 }
+body.scrolldown #hd ul li a:hover {
+  color: cornflowerblue !important;
+  transition: none;
+}
 body.scrolldown #hd a:not(.logo) {
   color: #222 !important;
-  padding: 18px 1rem !important;
+  padding: 18px 1.5rem !important;
   transition: 0.4s;
+}
+body.scrolldown #hd #Layer_2 {
+  fill: cornflowerblue !important;
 }
 body.scrolldown #family {
   transform: translateX(0);

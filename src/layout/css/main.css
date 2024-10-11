@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #mainBanner .swiper-slide {
   background: #000;
   font-size: 100px;
@@ -7,4 +8,51 @@
 #mainBanner .swiper-slide.swiper-slide-active {
   opacity: 0.5;
   font-size: 200px !important;
+}
+
+#faqcontent {
+  scroll-margin-top: 120px;
+}
+
+.content {
+  padding: 0 25rem 0 25rem;
+}
+
+#faqcontent div {
+  padding-bottom: 0 !important;
+}
+#faqcontent div dl dt {
+  cursor: pointer;
+  user-select: none;
+  pointer-events: auto;
+}
+#faqcontent div dl dt.expend {
+  color: cornflowerblue !important;
+}
+#faqcontent div dl dt.expend + dd {
+  border-bottom: 1px solid #dee2e6;
+  opacity: 1; /* 불투명도 1로 변경 */
+  max-height: 200px !important; /* 적절한 최대 높이로 설정 */
+  padding: 1.5rem 0 1.5rem 1.5rem !important;
+}
+#faqcontent div dl dt.expend svg {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+#faqcontent div dl dt svg {
+  transition: transform 0.2s ease-in;
+}
+#faqcontent div dl dd {
+  max-height: 0 !important; /* 기본적으로 높이를 0으로 설정 */
+  padding: 0 0 0 1.5rem !important;
+  opacity: 0; /* 불투명도 0 */
+  overflow: hidden; /* 넘치는 내용 숨김 */
+  font-size: 18px;
+}
+#faqcontent div dl:nth-child(1) {
+  border-top: 2px solid #000;
+  padding-top: 1px !important;
+}
+#faqcontent div div {
+  border-bottom: 2px solid #000;
 }
